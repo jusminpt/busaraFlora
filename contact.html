@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--#6
+   Author: Jusmin Pratheeppornsak 
+   Filename: contact.html
+   -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="layout.css">
+    <script src="script2.js" defer></script>
+    <script src="script3_validation.js"></script>
+    <script src="script5_xmas.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt=""></a>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li> <a href="about.html">About</a></li>
+                <li> <a href="gallery.html">Gallery</a></li>
+                <li> <a href="private_class.html">Private class</a></li>
+                <li> <a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <!--10. Create a form-->
+    <form name="myForm" action="#" onsubmit="return checkTextArea()">
+    <div class="row">
+        <div class="contact-head">
+            <h1 id="heading">CONTACT</h1>
+            <p style="color:rgb(184, 178, 178);">PLEASE COMPLETE THE FORM BELOW</p>
+        </div>
+    </div>
+
+    <div class="contact">
+
+        <div class="top">
+            <h2>Name*</h2>
+            <input type="textarea" id="name"name="name" required><br><br>
+        </div>
+        <div>
+            <h2>Email*</h2>
+            <input type="textarea" id="email"name="email" required><br><br>
+        </div>
+        <div>
+            <h2>Event Type</h2>
+                  <select id="event-type">
+                     <option value="Select" selected>--Option--</option>
+                     <option value="Wedding">Wedding</option>
+                     <option value="Graduation">Graduation</option>
+                     <option value="Funeral">Funeral</option>
+                     <option value="Other">Other</option>
+                    </select>
+        </div>
+        <div>
+            <h2>Date</h2>
+            <caption>(Not required if you haven't set a specific date yet)</caption><br>
+            <input type="textarea" name="date"><br>
+            <caption>(MM-DD-YYYY)</caption><br><br>
+        </div>
+        <div>
+            <h2>Estimated Floral Budget*</h2>
+            <input type="textarea" id="budget"name="budget" required><br><br>
+        </div>
+        <div>
+            <h2>Wedding Location</h2>
+            <caption>(City name is ok if a venue hasn't been chosen)</caption><br>
+            <input type="textarea" name="location"><br><br>
+        </div>
+        <div>
+            <h2>number of guests (if known)</h2>
+            <input type="textarea" name="guest"><br><br>
+        </div>
+        <div>
+            <h2>Your overall expectation of what you would like to have in your wedding in term of flowers </h2>
+            <input type="textarea" name="wedding-plan"><br><br>
+        </div>
+        <div>
+            <h2>How did you hear about us? </h2>
+
+            <input type="checkbox" name="Instagram" value="ig">
+            <label for="Instagram">Instagram</label><br>
+            <input type="checkbox" name="Facebook" value="fb">
+            <label for="Facebook">Facebook</label><br>
+            <input type="checkbox" name="Word of mouth" value="wm">
+            <label for="Word of mouth">Word of mouth</label><br>
+            <input type="checkbox" name="Previous Clients" value="pc">
+            <label for="Previous Clients">Previous Clients</label><br>
+            <input type="checkbox" name="Google Business" value="gb">
+            <label for="Google Business">Google Business</label><br>
+            <input type="checkbox" name="Yelp" value="Yelp">
+            <label for="Yelp">Yelp</label><br>
+            <input type="checkbox" name="Others" value="Others">
+            <label for="Others">Others (please fill the box)</label>
+            <input type="text" id="OtherAdd" name="Others"><br><br>
+        </div>
+        <button id="submit" value="Submit">Submit</button>
+
+        <a href="#top">Back to top.</a>
+
+        <br><br>
+    </div>
+    </form>
+    
+    <div class="row">
+        <div class="col-1-6">
+            <img src="img/contact1.jpeg" alt="">
+        </div>
+        <div class="col-1-6">
+            <img src="img/contact2.jpeg" alt="">
+        </div>
+        <div class="col-1-6">
+            <img src="img/contact3.jpeg" alt="">
+        </div>
+        <div class="col-1-6">
+            <img src="img/contact4.jpeg" alt="">
+        </div>
+        <div class="col-1-6">
+            <img src="img/contact5.jpeg" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <footer>
+            <ul class="social">
+                <li> <a href="mailto:busara.flora@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                <li>
+                    <a href="https://www.facebook.com/busara.flora/?modal=media_composer&ref=page_homepage_panel">
+                        <i class="fa fa-facebook-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/busara.flora/?hl=en"><i class="fa fa-instagram"></i></a>
+                </li>
+            </ul>
+
+            JmJusmin &copy; 2020 All Rights Reserved
+        </footer>
+    </div>
+</body>
+
+</html>

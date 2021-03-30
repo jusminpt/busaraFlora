@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--#6
+   Author: Jusmin Pratheeppornsak 
+   Filename: private_class.html
+   -->
+   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="layout.css">
+    <script src="script2.js" defer></script>
+    <script src="script4_table.js"></script>
+    <script src="script5_xmas.js"></script>
+    <script>
+        function showHide() {
+            //3. use querySelector
+            var x = document.querySelector("#myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+            }
+        //5.c
+        function deleteDiv(){
+            var y = document.querySelector("#myDIV");
+            y.parentNode.removeChild(y);
+        }
+    </script>
+    <style>
+        button {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            margin-left: 4px 2px;
+            cursor: pointer;
+        }
+        #show:hover,#delete:hover{
+            opacity: 0.5;
+        }
+        input#buttonAdd,#delete{
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            margin-left:780px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt=""></a>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li> <a href="about.html">About</a></li>
+                <li> <a href="gallery.html">Gallery</a></li>
+                <li> <a href="private_class.html">Private class</a></li>
+                <li> <a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+
+    <div class="row">
+        <!--first row-->
+        <div class="col-1-1">
+            <h1 id="heading">Floral design workshops</h1>
+
+            <p>A step up from the basic floral design workshops, the classes in our Essential Arranging Series
+                uses the most exquisite flowers and the choicest materials to create stunning, eye-catching
+                arrangements.
+                We will explore the floral philosophy of form, color and texture and utilize a multitude of design
+                techniques.You will learn how to select your own flowers, accent materials and containers to achieve
+                your
+                desired
+                effect and how to condition your flowers so that their beauty can last.</p>
+
+            <p>All classes are designed for beginners and no flower experience is necessary.
+                These classes are not part of the Professional Training or Advanced Design Programs.
+                There are no refunds, no date changes and no makeup classes. If you cannot attend you
+                may send someone in your place if you notify us in advance, or you may pick up your flowers within three
+                days of the class.
+            </p>
+
+            <div class="row">
+                <!--second row-->
+
+                <div class="col-1-2">
+                    <h2>PRICE</h2>
+                    <p> An individual class in the series is $115; the discounted price for taking all three classes
+                        in the Essential Arranging Series is $275. Price includes the most sought-after flowers and all
+                        materials;
+                        take home everything you create.</p>
+                </div>
+
+                <div class="col-1-2">
+                    <h2>TIME</h2>
+                    <p>We are working on your schedule. All classes are held from 10:00am to 3:00pm.
+                        <button id = "show" onclick="showHide()">Learn more!</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-1-1">
+        <div id="myDIV" hidden>
+            <form id="orderForm" name="orderForm" method="get" action="#">
+                <H2>Class schedule</H2>
+                <caption>*Please select the option below</caption>
+                <table id="orderTable">
+                   <tr>
+                      <td>
+                         <label for="class">Class</label>
+                         <select name="class" id="class">
+                            <option value="115"selected>Individual </option>
+                            <option value="275">3 Sessions </option>
+                         </select>
+                         <input type="hidden" id="className" name="className" />
+                      </td>
+                      <td class="rightA">
+                         <label for="qty">Qty</label>
+                         <select name="qty" id="qty">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                         </select>
+                      </td>
+                      <td>
+                         <input type="text" name="initialCost" id="initialCost" size="10" readonly />
+                      </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <label><input type="checkbox" class="check" /> Free & Unstructured Bouquet</label><br>
+                     <label><input type="checkbox" class="check" /> Round & Romantic Bouquet</label><br>
+                     <label><input type="checkbox" class="check" /> Cascade & Flowy Bouquet</label><br>
+                     <label><input type="checkbox" class="check" /> Tuscan Country Style Design</label><br>
+                     <label><input type="checkbox" class="check" /> Moroccan Bazaar Tablescape</label><br><br>
+                    </td>
+                    <td>
+                     <label><input type="checkbox" class="check" /> Cool Blue Pool Vase</label><br>
+                     <label><input type="checkbox" class="check" /> Round & Romantic Bouquet</label><br>
+                     <label><input type="checkbox" class="check" /> Beach House Hydrangea Design</label><br>
+                     <label><input type="checkbox" class="check" /> French Casual Garden Arrangement</label><br>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                   <tr>
+                      <td colspan="2" class="rightA">Subtotal</td>
+                      <td class="outcell">
+                         <input type="text" name="subtotal" id="subtotal" size="10" readonly />
+                      </td>
+                   </tr>
+       
+                   <tr>
+                      <td colspan="2" class="rightA">Tax (10%)</td>
+                      <td>
+                         <input type="text" name="salesTax" id="salesTax" size="10" readonly />
+                      </td>
+                   </tr>
+       
+                   <tr>
+                      <td colspan="2" class="rightA">TOTAL</td>
+                      <td>
+                         <input type="text" name="totalCost" id="totalCost" size="10" readonly />
+                      </td>
+                   </tr>
+                </table>
+                <input type="submit" id="buttonAdd" value="Add to cart" />
+             </form>
+             <br>
+             <button id = "delete" onclick="deleteDiv()">Delete</button>
+
+<!--
+                  <tr>
+                    <td>
+                        <select name="class" id="class">
+                            <option value="115" selected>Individual</option>
+                            <option value="275">3 session</option>              
+                    </td>
+                    <td>
+                        <select name="qty" id="qty">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                         </select>                 
+                    </td>
+                    <td>
+                    <input type="text" name="initCost" id="initCost" size="10"readonly />
+                    </td>
+                  </tr>
+                -->
+                <!--
+                  <tr>
+                    <td>
+                        <label for="model"><strong>Spring</strong></label><br>
+                           <label><input type ="checkbox" value="115">Free & Unstructured Bouquet<br></label>
+                           <label><input type ="checkbox" value="115">Round & Romantic Bouquet<br></label>
+                           <label><input type ="checkbox" value="115">Cascade & Flowy Bouquet<br></label>
+                        <input type="hidden" id="modelName" name="modelName" />
+                     </td>
+                     <td class="rightA">
+                        <label for="qty">Qty</label>
+                        <select name="qty" id="qty">
+                           <option value="1" selected>1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                           <option value="6">6</option>
+                           <option value="7">7</option>
+                           <option value="8">8</option>
+                           <option value="9">9</option>
+                           <option value="10">10</option>
+                        </select>
+                     </td>
+                     <td>
+                        <input type="text" name="initialCost" id="initialCost" size="10" readonly />
+                     </td>
+                </tr>
+
+
+                
+                    <tr>
+                        <td>
+                           <label for="model"><strong>Spring</strong></label><br>
+                              <label><input type ="checkbox" value="115">Free & Unstructured Bouquet<br></label>
+                              <label><input type ="checkbox" value="115">Round & Romantic Bouquet<br></label>
+                              <label><input type ="checkbox" value="115">Cascade & Flowy Bouquet<br></label>
+                           <input type="hidden" id="modelName" name="modelName" />
+                        </td>
+                        <td class="rightA">
+                           <label for="qty">Qty</label>
+                           <select name="qty" id="qty">
+                              <option value="1" selected>1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                           </select>
+                        </td>
+                        <td>
+                           <input type="text" name="initialCost" id="initialCost" size="10" readonly />
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <label for="model"><strong>Summer</strong></label><br>
+                              <input type ="checkbox" value="115">Cool Blue Pool Vase</option><br>
+                              <input type ="checkbox" value="115">Sunset at the Lake Design</option><br>
+                              <input type ="checkbox" value="115">Beach House Hydrangea Design</option><br>
+                           <input type="hidden" id="modelName" name="modelName" />
+                        </td>
+                        <td class="rightA">
+                           <label for="qty">Qty</label>
+                           <select name="qty" id="qty">
+                              <option value="1" selected>1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                           </select>
+                        </td>
+                        <td>
+                           <input type="text" name="initialCost" id="initialCost" size="10" readonly />
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <label for="model"><strong>Fall</strong></label><br>
+                              <input type ="checkbox" value="115">Tuscan Country Style Design</option><br>
+                              <input type ="checkbox" value="115">French Casual Garden Arrangement</option><br>
+                              <input type ="checkbox" value="115">Moroccan Bazaar Tablescape</option><br>
+                           <input type="hidden" id="modelName" name="modelName" />
+                        </td>
+                        <td class="rightA">
+                           <label for="qty">Qty</label>
+                           <select name="qty" id="qty">
+                              <option value="1" selected>1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                           </select>
+                        </td>
+                        <td>
+                           <input type="text" name="initialCost" id="initialCost" size="10" readonly />
+                        </td>
+                     </tr>
+                     -->
+         
+        <!--             
+        <button id="addCart" onclick="">Add to cart</button>
+        <button id = "delete" onclick="deleteDiv()">Delete</button>
+        -->
+            </div> 
+        </div>
+    </div>
+            <!--
+        <div class="row">
+            <div class="col-1-4">
+                <h2>Spring</h2>
+                <p>Trending Bouquets – Saturdays, 10:00am to 12:00pm</p>
+                <img src="img/tanya2.jpg" alt="">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td><strong>Date</strong></td>
+                            <td><strong>Course Title</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>April 18, 2020</td>
+                            <td>Free & Unstructured Bouquet</td>
+                        </tr>
+                        <tr>
+                            <td>April 25, 2020</td>
+                            <td>Round & Romantic Bouquet</td>
+                        </tr>
+                        <tr>
+                            <td>May 2, 2020</td>
+                            <td>Cascade & Flowy Bouquet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-1-4">
+                <h2>Summer</h2>
+                <p>Summer Splash – Wednesdays, 7:00pm to 9:00pm</p>
+                <img src="img/tanya3.jpg" alt="">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td><strong>Date</strong></td>
+                            <td><strong>Course Title</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>July 15, 2020</td>
+                            <td>Cool Blue Pool Vase</td>
+                        </tr>
+                        <tr>
+                            <td>July 22, 2020</td>
+                            <td>Sunset at the Lake Design</td>
+                        </tr>
+                        <tr>
+                            <td>July 29, 2020</td>
+                            <td>Beach House Hydrangea Design</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-1-4">
+                <h2>Fall</h2>
+                <p>Flower Journey – Wednesdays, 7:00pm to 9:00pm</p>
+                <img src="img/tanya4.jpg" alt="">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td><strong>Date</strong></td>
+                            <td><strong>Course Title</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>November 4, 2020</td>
+                            <td>Tuscan Country Style Design</td>
+                        </tr>
+                        <tr>
+                            <td>November 11, 2020</td>
+                            <td>French Casual Garden Arrangement</td>
+                        </tr>
+                        <tr>
+                            <td>November 18, 2020</td>
+                            <td>Moroccan Bazaar Tablescape</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        -->
+        
+        <div class="row">
+            <!--fourth row-->
+            <footer>
+                <ul class="social">
+                    <li> <a href="mailto:busara.flora@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                    <li>
+                        <a href="https://www.facebook.com/busara.flora/?modal=media_composer&ref=page_homepage_panel">
+                            <i class="fa fa-facebook-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/busara.flora/?hl=en"><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+
+                JmJusmin &copy; 2020 All Rights Reserved
+            </footer>
+        </div>
+</body>
+
+
+</html>
